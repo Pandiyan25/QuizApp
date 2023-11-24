@@ -23,7 +23,7 @@ export default function Timer({ onSubmit }) {
 
   useEffect(() => {
     const alertTimeout = setTimeout(() => {
-      if (secondsRemaining <= 30 && !alertShown) {
+      if (secondsRemaining <= 300 && !alertShown) {
         toast.error("Last 5 Minutes", {
           autoClose: 3000,
         });
