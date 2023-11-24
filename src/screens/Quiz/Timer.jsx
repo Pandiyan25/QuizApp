@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Timer({ onSubmit }) {
-  const [secondsRemaining, setSecondsRemaining] = useState(30 * 60);
+  const [secondsRemaining, setSecondsRemaining] = useState(1 * 60);
   const [alertShown, setAlertShown] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Timer({ onSubmit }) {
 
   useEffect(() => {
     const alertTimeout = setTimeout(() => {
-      if (secondsRemaining <= 300 && !alertShown) {
+      if (secondsRemaining <= 30 && !alertShown) {
         toast.error("Last 5 Minutes", {
           autoClose: 3000,
         });
